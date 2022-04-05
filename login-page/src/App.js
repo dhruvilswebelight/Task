@@ -1,24 +1,27 @@
-// import './App.css';
+import './App.css';
 
 import React, {component} from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, Routes, useParams, useRouteMatch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, Routes, useParams, useRouteMatch, BrowserRouter } from 'react-router-dom';
 
 import LoginPage from './LoginPage';
 import RegistrationPage from './RegistrationPage';
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Route exact path = "/">
-      <LoginPage/> 
-      </Route>
-      <Route path = "/Registration-Page">
+   
+    <div>     
+        <Route exact path = "/Registration-Page">
         <RegistrationPage />
       </Route>
-       
-      </header>
+      <Route path = "/Login-Page">
+      <LoginPage/>
+      </Route>  
+  
+     
     </div>
+  
   );
 }
 
 export default App;
+
+
