@@ -10,7 +10,7 @@ const[age, setAge] = useState("");
 
 const validateForm = () => {
     if(firstName !== "" && lastName !== "" && email !== "" && age !== ""){
-        alert("Registration successful")
+        // alert("Registration successful")
         history.push('/Login-Page')
     }
     else{
@@ -21,7 +21,10 @@ const validateForm = () => {
 
     return(
         
-        <form >
+        <form className="registration-form">
+            <div>
+                <h1>Registration</h1>
+            </div>
             <div>
                 <label htmlFor="firstName">FirstName</label>
                 <input type="text" name="firstName" id="firstName" autoComplete="off"
@@ -52,7 +55,7 @@ const validateForm = () => {
              
             </div>
 
-            <button type="submit"  onClick={() => validateForm()}>Register</button>
+            <button type="submit" className="register" onClick={() => validateForm()}>Register</button>
         </form>
     )
 }

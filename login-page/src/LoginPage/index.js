@@ -9,7 +9,7 @@ const[password1, setPassword1] = useState(false);
 
 const validateForm = () => {
     if(username !== "" && password !== ""){
-        alert("Login successful")
+        // alert("Login successful")
         history.push('/Registration-Page');
     
     }
@@ -25,9 +25,12 @@ const validateForm = () => {
   }
     return(
         // alert(password1),
-        <form  >
+        <form className="login-form" >
             <div>
-                <label htmlFor="username">username</label>
+                <h1>Login</h1>
+            </div>
+            <div>
+                <label htmlFor="username">Username</label>
                 <input type="text" name="username" id="username" autoComplete="off"
                  value={username}
                  onChange={(e) => setUsername(e.target.value)}/>
@@ -42,8 +45,8 @@ const validateForm = () => {
              
             </div>
 
-            <button type="submit"  onClick={() => validateForm()}>Login</button>
-            <button type="Show Password"  onClick={(e) => showPassword(e)}>Show Password</button>
+            <button type="submit" className="submit" onClick={() => validateForm()}>Login</button>
+            <button type="Show Password" className="ShowPassword" onClick={(e) => showPassword(e)}>Show Password</button>
         </form>
     )
 }
