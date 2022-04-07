@@ -21,7 +21,7 @@ const validateForm = () => {
 
  const showPassword = (e) => {
      e.preventDefault()
-   setPassword1(true)
+   setPassword1(password1=>!password1)
   }
     return(
         // alert(password1),
